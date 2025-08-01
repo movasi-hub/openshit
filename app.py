@@ -1,9 +1,5 @@
-from flask import Flask
+from flask import Flask, request, jsonify
 app = Flask(__name__)
-
-@app.route('/')
-def hello():
-    return "¡Hola desde OpenShift Developer Sandbox!"
 
 @app.route('/multiplicar', methods=['GET'])
 def multiplicar():
