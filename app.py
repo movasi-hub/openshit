@@ -7,7 +7,7 @@ def sumar():
     try:
         a = int(request.args.get('a'))
         b = int(request.args.get('b'))
-        return jsonify({'operacion': 'suma', 'a': a, 'b': b, 'resultado': a + b})
+        return jsonify({'operacion': 'sumar', 'a': a, 'b': b, 'resultado': a + b})
     except (TypeError, ValueError):
         return jsonify({'error': 'Parámetros inválidos'}), 400
 
@@ -16,7 +16,7 @@ def restar():
     try:
         a = int(request.args.get('a'))
         b = int(request.args.get('b'))
-        return jsonify({'operacion': 'resta', 'a': a, 'b': b, 'resultado': a - b})
+        return jsonify({'operacion': 'restar', 'a': a, 'b': b, 'resultado': a - b})
     except (TypeError, ValueError):
         return jsonify({'error': 'Parámetros inválidos'}), 400
 
@@ -25,7 +25,7 @@ def multiplicar():
     try:
         a = int(request.args.get('a'))
         b = int(request.args.get('b'))
-        return jsonify({'operacion': 'multiplicación', 'a': a, 'b': b, 'resultado': a * b})
+        return jsonify({'operacion': 'multiplicar', 'a': a, 'b': b, 'resultado': a * b})
     except (TypeError, ValueError):
         return jsonify({'error': 'Parámetros inválidos'}), 400
 
@@ -36,7 +36,7 @@ def dividir():
         b = int(request.args.get('b'))
         if b == 0:
             return jsonify({'error': 'División entre cero no permitida'}), 400
-        return jsonify({'operacion': 'división', 'a': a, 'b': b, 'resultado': a / b})
+        return jsonify({'operacion': 'dividir', 'a': a, 'b': b, 'resultado': a / b})
     except (TypeError, ValueError):
         return jsonify({'error': 'Parámetros inválidos'}), 400
 
